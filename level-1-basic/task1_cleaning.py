@@ -1,19 +1,30 @@
 import pandas as pd
 
-# ASSUMPTION: Based on the 14-column structure and 'House Prediction' context, 
-# I am treating this as the Boston Housing Dataset and applying standard headers.
-
-# Step A: Creating a list of names for the columns
+# 1. Load data
 names_list = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'PRICE']
+df = pd.read_csv('house_prediction.csv', header=None, names=names_list, sep='\s+')
 
-# Step B: Opening the file and telling Python "Use these names!"
-# I used 'header=None' because the file doesn't have its own titles.
-df = pd.read_csv('house_prediction.csv', header=None, names=names_list)
+# 2. APPLY REAL-LIFE FORMATTING
+# Define which columns get which treatment
+int_cols = ['ZN', 'CHAS', 'AGE', 'RAD', 'TAX']
+high_prec_cols = ['CRIM', 'NOX']
+std_prec_cols = ['INDUS', 'RM', 'DIS', 'PTRATIO', 'B', 'LSTAT', 'PRICE']
 
-# Step C: Showing the first 5 rows on the screen so I can see the titles
-print("Look! Now the numbers have titles at the top:")
-print(df.head())
+# Convert Whole Numbers
+for col in int_cols:
+    df[col] = df[col].round(0).astype(int)
 
-# Step D: Saving this as a NEW, clean file
+# Apply Specific Rounding
+for col in high_prec_cols:
+    df[col] = df[col].round(5)
+
+for col in std_prec_cols:
+    df[col] = df[col].round(2)
+
+# 3. VERIFY OUTPUT
+print("--- Final Professional Dataset (Task 1 Complete) ---")
+# Using to_string() ensures the terminal doesn't hide columns
+print(df.head().to_string(index=False))
+
+# 4. SAVE THE CLEAN FILE
 df.to_csv('cleaned_house_data.csv', index=False)
-print("\nDone! You now have a file called 'cleaned_house_data.csv' that makes sense.")
