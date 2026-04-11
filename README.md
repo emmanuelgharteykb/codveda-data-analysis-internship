@@ -24,7 +24,6 @@ The internship is divided into three levels:
 
 **Tools Used:** Python, Pandas
 
----
 
 ### Task 2: Exploratory Data Analysis (EDA)
 **Dataset:** `cleaned_house_data.csv`  
