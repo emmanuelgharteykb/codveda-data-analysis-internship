@@ -5,7 +5,7 @@ This repository contains my completed tasks for the **Codveda Technologies Data 
 ## 📁 Project Structure
 The internship is divided into three levels:
 * **Level 1: Basic** - Data Cleaning and Exploratory Data Analysis (EDA).
-* **Level 2: Intermediate** - Regression, Time Series, and Clustering.
+* **Level 2: Intermediate** - Machine Learning Modeling (Regression), Benchmarking, and Evaluation.
 * **Level 3: Advanced** - Predictive Modeling, Dashboards, and NLP.
 
 ---
@@ -38,18 +38,43 @@ The internship is divided into three levels:
 **Tools Used:** Python, Pandas, Matplotlib, Seaborn
 
 ---
+## 🚀 Level 2: Intermediate Tasks
 
-## 🚀 How to Run
+### Task 3: Predictive Modeling & Benchmarking
+**Dataset:** `cleaned_house_data.csv`  
+**Objective:** Build a predictive "engine" to estimate house prices and verify accuracy using multiple machine learning algorithms.
+
+**Phase 1: Linear Regression (The Baseline)**
+* Initially implemented a Linear Regression model.
+* **The Insight:** While the model achieved an **R-squared of 0.6690**, the error margin was concerningly high (over $5,400 off for our test case). I wasn't fully confident in this 67% accuracy as it seemed to oversimplify the market dynamics.
+
+**Phase 2: Random Forest (The Optimization)**
+* To verify the accuracy and push the performance, I pivoted to a **Random Forest Regressor** (an ensemble method using 100 decision trees).
+* **The Breakthrough:** This model captured the non-linear complexities of the data, boosting the **R-squared to 0.8993**.
+* **Result:** Reduced the prediction error from $5,414 down to just **$895**, a significant improvement that validates the model's reliability for real-world application.
+
+**Tools Used:** Python, Scikit-Learn (LinearRegression, RandomForestRegressor, train_test_split)
+
+---
+
+## ⚙️ How to Run
 1. Clone this repository: 
-   `git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git`
-2. Install dependencies:
+   `git clone https://github.com/emmanuelgharteykb/codveda-data-analysis-internship.git`
+2. Activate Virtual Environment:
+   `source venv/bin/activate`
+3. Install dependencies:
    `pip install pandas matplotlib seaborn scikit-learn`
-3. Run the scripts:
+4. Run the scripts:
 ```bash
-   python Level-1-Basic/task1_cleaning.py
+   # Level 1
+   python level-1-basic/task1_cleaning.py
    python level-1-basic/task2_eda.py
+
+   # Level 2
+   python level-2-intermediate/task3_model.py
+   python level-2-intermediate/task3_random_forest.py
 ```
 ---
 
 ## 👤 Author
-**Emmanuel Kobina Bondzie Ghartey** *Aspiring Data Analyst | Business Intelligence Developer*
+**Emmanuel Kobina Bondzie Ghartey** *Aspiring Data/Business Analyst | Business Intelligence Developer*
