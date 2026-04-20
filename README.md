@@ -53,7 +53,7 @@ The internship is divided into three levels:
 * **The Breakthrough:** This model captured the non-linear complexities of the data, boosting the **R-squared to 0.8993**.
 * **Result:** Reduced the prediction error from $5,414 down to just **$895**, a significant improvement that validates the model's reliability for real-world application.
 
-**Tools Used:** Python, Scikit-Learn (LinearRegression, RandomForestRegressor, train_test_split)
+**Tools Used:** Python, Pandas, Scikit-Learn (LinearRegression, RandomForestRegressor, train_test_split)
 
 ---
 
