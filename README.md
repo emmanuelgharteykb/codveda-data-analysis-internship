@@ -42,7 +42,7 @@ The internship is divided into three levels:
 
 ### Task 3: Predictive Modeling & Benchmarking
 **Dataset:** `cleaned_house_data.csv`  
-**Objective:** Build a predictive "engine" to estimate house prices and verify accuracy using multiple machine learning algorithms.
+**Objective:** Split the dataset into training and testing sets. Fit a linear regression model using scikit-learn. Interpret the coefficients and evaluate the model using metrics such as R-squared and mean squared error. 
 
 **Phase 1: Linear Regression (The Baseline)**
 * Initially implemented a Linear Regression model.
