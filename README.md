@@ -55,6 +55,17 @@ The internship is divided into three levels:
 
 **Tools Used:** Python, Pandas, Scikit-Learn (LinearRegression, RandomForestRegressor, train_test_split)
 
+### Task 4: Time Series Analysis & Trend Detection
+**Dataset:** `stock_prices_dataset.csv`  
+**Objective:** Analyse historical stock data to isolate trends and validate market momentum using statistical testing.
+
+**Key Insights Derived:**
+1. **Trend Isolation:** Used **Seasonal Decomposition** to strip away market "noise," revealing a consistent long-term bullish trend where the price grew from ~$77 to ~$98.
+2. **Volatility Smoothing:** Applied a **3-month rolling mean** to identify that the early 2016 dip was a temporary market correction rather than a structural trend reversal.
+3. **Statistical Validation:** Conducted an **Augmented Dickey-Fuller (ADF) test**. The resulting **p-value of 0.993** statistically confirmed the series is **Non-Stationary**, providing mathematical proof of persistent momentum.
+
+**Tools Used:** Python, Pandas, Matplotlib, Statsmodels (ADF Test, seasonal_decompose)
+
 ---
 
 ## ⚙️ How to Run
@@ -63,7 +74,7 @@ The internship is divided into three levels:
 2. Activate Virtual Environment:
    `source venv/bin/activate`
 3. Install dependencies:
-   `pip install pandas matplotlib seaborn scikit-learn`
+   `pip install pandas matplotlib seaborn scikit-learn statsmodels`
 4. Run the scripts:
 ```bash
    # Level 1
@@ -71,8 +82,10 @@ The internship is divided into three levels:
    python level-1-basic/task2_eda.py
 
    # Level 2
-   python level-2-intermediate/task3_model.py
-   python level-2-intermediate/task3_random_forest.py
+   python level-2-intermediate/task3_housing/task3_model.py
+   python level-2-intermediate/task3_housing/task3_random_forest.py
+   python level-2-intermediate/task4_time_series/task4_analysis.py
+   python level-2-intermediate/task4_time_series/task4_analysis_phase2.py
 ```
 ---
 
