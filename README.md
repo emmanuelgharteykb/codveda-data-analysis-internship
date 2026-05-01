@@ -67,6 +67,32 @@ The internship is divided into three levels:
 **Tools Used:** Python, Pandas, Matplotlib, Statsmodels (ADF Test, seasonal_decompose)
 
 ---
+## ⚙️ Level 3: Advanced Tasks
+
+### Task 5: Customer Churn Prediction (Advanced Classification)
+**Dataset:** `churn-bigml-80.csv`, `churn-bigml-20.csv`  
+**Objective:** Build a system to predict which customers are likely to leave a company (Churn).
+
+**Executive Summary:**  
+Data science is often about spotting the human frustration hidden in the numbers before a customer walks away. This project was highly relatable; I remembered my own experience in the UK, calling a service provider four times with no resolution before finally quitting. Seeing that exact "frustration threshold" appear as a statistical pattern in my code transformed this from a technical task into a mission to solve real-world churn.
+
+**Phase 1: Logistic Regression (The Baseline)**
+* Implemented a baseline model to separate "Churners" from "Loyalists.".
+* **The Insight:** This model was too simple and missed 76% of actual churners (Low Recall). It proved that human behavior is rarely a straight line.
+
+**Phase 2: Random Forest & Grid Search (The Optimization)**
+* Pivoted to a **Random Forest** classifier and used **GridSearchCV** to fine-tune the "brains" of the model (tree depth and split points).
+* **The Breakthrough:** Boosted the "catch rate" (Recall) by **2.5x** compared to the baseline.
+* **Actionable Output:** Generated a "High-Risk" list of **62 specific customers** for the sales team to prioritize for retention.
+
+**Key Insights Derived:**
+1. **The "Power of 4" Trigger:** Customers reaching 4 support calls were almost guaranteed to leave. I proposed a "Safety Net" trigger at the **3rd call** to intervene before the customer quits.
+2. **Precision Over Guesswork:** Achieved **95% Precision**, meaning the model is right 19 out of 20 times when it flags a customer.
+3. **From Math to Action:** Successfully isolated **62 high-risk individuals** from the testing pool, turning abstract data into a literal to-do list for marketing.
+
+**Tools Used:** Python, Pandas, Scikit-Learn (RandomForestClassifier, LogisticRegression, GridSearchCV), StandardScaler, OneHotEncoder.
+
+---
 
 ## ⚙️ How to Run
 1. Clone this repository: 
@@ -86,6 +112,10 @@ The internship is divided into three levels:
    python level-2-intermediate/task3_housing/task3_random_forest.py
    python level-2-intermediate/task4_time_series/task4_analysis.py
    python level-2-intermediate/task4_time_series/task4_analysis_phase2.py
+
+# Level 3
+   python level-3-advanced/task5_predictive_modeling/task5_model.py
+   python level-3-advanced/task5_predictive_modeling/task5_model_phase2.py
 ```
 ---
 
