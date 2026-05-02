@@ -92,6 +92,22 @@ Data science is often about spotting the human frustration hidden in the numbers
 
 **Tools Used:** Python, Pandas, Scikit-Learn (RandomForestClassifier, LogisticRegression, GridSearchCV), StandardScaler, OneHotEncoder.
 
+
+### Task 6: Natural Language Processing (NLP) - Sentiment Analysis
+**Dataset:** `sentiment-dataset.csv`  
+**Objective:** Classify textual data as positive, negative, or neutral to understand the emotional pulse of the community.
+
+**The Workflow:**
+1. **Advanced Preprocessing:** Used **nltk** to perform tokenization, lowercasing, and **Lemmatization**. I specifically removed "stopwords" to ensure common words like "the" didn't drown out the real sentiment.
+2. **Sentiment Scoring:** Applied **TextBlob** to calculate polarity scores, categorizing hundreds of posts into emotional buckets.
+3. **Visual Intelligence:** Generated **Word Clouds** and **Distribution Charts** to instantly identify that "Life," "New," and "Joy" were the dominant drivers of the conversation.
+
+**Key Insights:**
+* **Healthy Community Pulse:** Positive and Neutral sentiments significantly outweigh Negative ones, suggesting a strong, supportive user base.
+* **Core Values Identified:** The prominence of words like "Friend," "Community," and "Journey" indicates that the audience highly values social connection and personal growth.
+* **Proactive Monitoring:** By isolating negative words like "Frustration" or "Challenge" in the cloud, we can "zoom in" on those specific posts to fix issues before they lead to the churn patterns I identified in Task 5.
+
+**Tools Used:** Python, Pandas, NLTK, TextBlob, WordCloud, Matplotlib.
 ---
 
 ## ⚙️ How to Run
@@ -116,6 +132,8 @@ Data science is often about spotting the human frustration hidden in the numbers
 # Level 3
    python level-3-advanced/task5_predictive_modeling/task5_model.py
    python level-3-advanced/task5_predictive_modeling/task5_model_phase2.py
+   python level-3-advanced/task6_sentiment_analysis/task6_sentiment_phase1.py
+   python level-3-advanced/task6_sentiment_analysis/task6_sentiment_phase2.py
 ```
 ---
 
